@@ -20,9 +20,9 @@
     <%= f.number_field :num2 %>
   </div>
   <div class="actions">
-    <%= f.submit %>
-    <%= f.submit %>
-    <%= f.submit %>
-    <%= f.submit %>
+    <%= f.button('Add', &Calculation.add(:num1,:num2)) %>
+    <%= f.button('Subtract') %>
+    <%= f.button('Multiply') %>
+    <%= f.button('Divide') %>
   </div>
 <% end %>

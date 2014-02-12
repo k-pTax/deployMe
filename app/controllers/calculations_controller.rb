@@ -71,4 +71,17 @@ class CalculationsController < ApplicationController
     def calculation_params
       params.require(:calculation).permit(:num1, :num2)
     end
+
+  def self.add (x,y)
+    x+y
+
+  end
+
+  def self.subtract(x,y)
+    x-y
+  end
+
+  def self.multiply(x,y)
+    x*y
+  end
 end
