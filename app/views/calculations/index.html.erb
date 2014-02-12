@@ -1,0 +1,29 @@
+<h1>Listing calculations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num1</th>
+      <th>Num2</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calculations.each do |calculation| %>
+      <tr>
+        <td><%= calculation.num1 %></td>
+        <td><%= calculation.num2 %></td>
+        <td><%= link_to 'Show', calculation %></td>
+        <td><%= link_to 'Edit', edit_calculation_path(calculation) %></td>
+        <td><%= link_to 'Destroy', calculation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Calculation', new_calculation_path %>

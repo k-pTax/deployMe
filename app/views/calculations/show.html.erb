@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Num1:</strong>
+  <%= @calculation.num1 %>
+</p>
+
+<p>
+  <strong>Num2:</strong>
+  <%= @calculation.num2 %>
+</p>
+
+<%= link_to 'Edit', edit_calculation_path(@calculation) %> |
+<%= link_to 'Back', calculations_path %>
