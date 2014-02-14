@@ -28,7 +28,7 @@ class CalculationsController < ApplicationController
 
     respond_to do |format|
       if @calculation.save
-        format.html { redirect_to @calculation, notice: 'Calculation was successfully created.' }
+        format.html { redirect_to new_calc, notice: 'Calculation was successfully created.' }
         format.json { render action: 'show', status: :created, location: @calculation }
       else
         format.html { render action: 'new' }
@@ -61,6 +61,18 @@ class CalculationsController < ApplicationController
     end
   end
 
+  def add
+  end
+
+  def subtract
+  end
+
+  def multiply
+  end
+
+  def divide
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_calculation
@@ -71,17 +83,4 @@ class CalculationsController < ApplicationController
     def calculation_params
       params.require(:calculation).permit(:num1, :num2)
     end
-
-  def self.add (x,y)
-    x+y
-
-  end
-
-  def self.subtract(x,y)
-    x-y
-  end
-
-  def self.multiply(x,y)
-    x*y
-  end
 end
