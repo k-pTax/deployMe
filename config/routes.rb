@@ -1,6 +1,5 @@
 OrigProject::Application.routes.draw do
-  resources :calculations, :only => [:new, :create, :add, :subtract, :multiply, :divide]
-
+  resources :calculations
   resources :posts
 
   resources :urls, :only => [:show, :new, :create]
@@ -10,10 +9,7 @@ OrigProject::Application.routes.draw do
   get "calculator/Subtract"
   get "calculator/Multiply"
   get "calculator/Divide"
-  get "calculation/Add"
-  get "calculation/Subtract"
-  get "calculation/Multiply"
-  get "calculation/Divide"
+  get "calculation/New"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

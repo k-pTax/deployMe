@@ -61,16 +61,8 @@ class CalculationsController < ApplicationController
     end
   end
 
-  def add
-  end
+  def math
 
-  def subtract
-  end
-
-  def multiply
-  end
-
-  def divide
   end
 
   private
